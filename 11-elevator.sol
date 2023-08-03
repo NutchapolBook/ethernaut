@@ -2,6 +2,7 @@
 pragma solidity ^0.8.0;
 
 interface Building {
+    // The problem is "external". We can modifie interface function that use exteranl
     function isLastFloor(uint) external returns (bool);
 }
 
