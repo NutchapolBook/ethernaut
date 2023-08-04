@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "ERC20.sol";
+import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract NaughtCoin is ERC20 {
     // string public constant name = 'NaughtCoin';
@@ -24,6 +24,7 @@ contract NaughtCoin is ERC20 {
         address _to,
         uint256 _value
     ) public override lockTokens returns (bool) {
+        // super > refering to contract we're inheriting from (ERC20/Details)
         super.transfer(_to, _value);
     }
 
