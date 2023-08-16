@@ -1,5 +1,5 @@
 pragma solidity ^0.8.0;
-import "./3-coinFlip.sol";
+import "./03-coinFlip.sol";
 
 contract AttackCoinFlip {
     CoinFlip public victimContract;
