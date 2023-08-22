@@ -59,7 +59,7 @@ function revise(uint i, bytes32 _content) public contacted {
 ```
 
 #### Need to know
-- [Fundamental store data in smart contract storage](note)
+- [Fundamental store data in smart contract storage](./note.md)
 - [How are state variables stored in smart contract storage slots?](https://docs.alchemy.com/docs/smart-contract-storage-layout#how-are-state-variables-stored-in-smart-contract-storage-slots)
 - [How are dynamically-sized state variables stored in smart contract memory?](https://docs.alchemy.com/docs/smart-contract-storage-layout#how-are-dynamically-sized-state-variables-stored-in-smart-contract-memory)
 
@@ -79,6 +79,12 @@ Call the **`revise(i, _content)`** to change `Storage` value at slot 0 (contact(
 	- 
         ```Ruby 
         playerAddress = '0x' + '0'.repeat(24) + player.slice(2);
+        ```
+
+        or
+
+        ```Ruby 
+        playerAddress = web3.utils.padLeft(player, 24);
         ```
 
 ```Ruby 
